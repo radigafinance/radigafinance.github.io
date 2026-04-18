@@ -7,19 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink:       #0D0D0D;
-    --paper:     #F5F0E8;
-    --cream:     #EDE8DC;
-    --rule:      #C8BFA8;
-    --muted:     #7A7260;
-    --bull:      #1A5C3A;
-    --bull-bg:   #EAF4EE;
-    --bear:      #7A1A1A;
-    --bear-bg:   #F7EAEA;
-    --watch:     #5C4A00;
-    --watch-bg:  #FBF5E0;
-    --accent:    #1A3A5C;
-    --tag-bg:    #E2DBCE;
+    --ink:       #E8E4DC;
+    --paper:     #0F1117;
+    --cream:     #181C26;
+    --rule:      #2A2F3E;
+    --muted:     #6B7280;
+    --bull:      #4ADE80;
+    --bull-bg:   #0D2818;
+    --bear:      #F87171;
+    --bear-bg:   #2A0F0F;
+    --watch:     #FCD34D;
+    --watch-bg:  #2A1F00;
+    --accent:    #60A5FA;
+    --tag-bg:    #1E2333;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,13 +34,14 @@
 
   /* ── Masthead ── */
   .masthead {
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 2px solid var(--rule);
     padding: 28px 40px 20px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    background: #0A0D14;
   }
   .masthead-left { display: flex; flex-direction: column; gap: 4px; }
   .masthead-label {
@@ -80,6 +81,7 @@
     gap: 8px;
     flex-wrap: wrap;
     align-items: center;
+    background: #0A0D14;
   }
   .filter-label {
     font-family: 'DM Mono', monospace;
@@ -100,8 +102,8 @@
     color: var(--muted);
     transition: all 0.15s;
   }
-  .filter-btn:hover { border-color: var(--ink); color: var(--ink); }
-  .filter-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: #0F1117; border-color: var(--accent); }
 
   /* ── Grid ── */
   .grid {
@@ -175,9 +177,9 @@
     border-radius: 2px;
     text-transform: uppercase;
   }
-  .sentiment-pill.bull { background: var(--bull-bg); color: var(--bull); border: 1px solid #A8D4B8; }
-  .sentiment-pill.bear { background: var(--bear-bg); color: var(--bear); border: 1px solid #D4A8A8; }
-  .sentiment-pill.watch { background: var(--watch-bg); color: var(--watch); border: 1px solid #D4C888; }
+  .sentiment-pill.bull { background: var(--bull-bg); color: var(--bull); border: 1px solid #1A5C38; }
+  .sentiment-pill.bear { background: var(--bear-bg); color: var(--bear); border: 1px solid #5C1A1A; }
+  .sentiment-pill.watch { background: var(--watch-bg); color: var(--watch); border: 1px solid #5C4400; }
   .sentiment-pill.neutral { background: var(--tag-bg); color: var(--muted); border: 1px solid var(--rule); }
 
   .updated-tag {
@@ -282,7 +284,7 @@
   }
   .dot.bull { background: var(--bull); }
   .dot.bear { background: var(--bear); }
-  .dot.watch { background: #B8960C; }
+  .dot.watch { background: var(--watch); }
   .dot.neutral { background: var(--muted); }
 
   .point-list { display: flex; flex-direction: column; gap: 7px; }
@@ -301,7 +303,7 @@
   }
   .point-marker.plus { color: var(--bull); }
   .point-marker.minus { color: var(--bear); }
-  .point-marker.watch { color: #B8960C; }
+  .point-marker.watch { color: var(--watch); }
 
   .catalyst-box {
     background: var(--tag-bg);
@@ -326,7 +328,7 @@
   .page-footer {
     margin: 40px 40px 0;
     padding-top: 20px;
-    border-top: 2px solid var(--ink);
+    border-top: 2px solid var(--rule);
     display: flex;
     justify-content: space-between;
     align-items: center;
