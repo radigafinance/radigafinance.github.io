@@ -25,7 +25,10 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 48px;
+  }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -40,8 +43,6 @@
   header {
     border-bottom: 1px solid var(--border);
     padding: 0 40px;
-    position: sticky;
-    top: 0;
     background: rgba(10,10,11,0.96);
     backdrop-filter: blur(12px);
     z-index: 100;
@@ -49,6 +50,16 @@
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    transition: height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+    overflow: hidden;
+  }
+
+  header.scrolled {
+    height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .logo {
@@ -95,7 +106,17 @@
     gap: 0;
     overflow-x: auto;
     scrollbar-width: none;
-    background: var(--surface);
+    background: rgba(17,17,19,0.97);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .stock-nav.elevated {
+    box-shadow: 0 2px 24px rgba(0,0,0,0.7);
+    border-bottom-color: var(--border2);
   }
 
   .stock-nav::-webkit-scrollbar { display: none; }
@@ -739,6 +760,16 @@
 <div class="toast" id="toast">Link copied to clipboard</div>
 
 <script>
+  // Collapse header and elevate nav on scroll
+  const headerEl = document.querySelector('header');
+  const stockNav = document.querySelector('.stock-nav');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 20;
+    headerEl.classList.toggle('scrolled', scrolled);
+    stockNav.classList.toggle('elevated', scrolled);
+  }, { passive: true });
+
   // Toggle post expand/collapse
   function togglePost(header) {
     const post = header.closest('.post');
