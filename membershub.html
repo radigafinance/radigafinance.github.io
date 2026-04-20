@@ -1624,6 +1624,41 @@
 
     <div class="posts-label">Research Notes & Updates</div>
 
+    <div class="post expanded" id="mrvl-post-004">
+      <div class="post-header" onclick="togglePost(this)">
+        <span class="post-type type-news-reaction">News Reaction</span>
+        <span class="post-title">Marvell & Google: What the custom AI chip deal really means for investors</span>
+        <div class="post-meta">
+          <span class="post-date">20 Apr 2026</span>
+          <a class="post-link" href="#mrvl-post-004" onclick="copyLink(event, this)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 9.5a3.5 3.5 0 005 0l2-2a3.5 3.5 0 00-5-5l-1 1"/><path d="M9.5 6.5a3.5 3.5 0 00-5 0l-2 2a3.5 3.5 0 005 5l1-1"/></svg>
+            Copy link
+          </a>
+        </div>
+        <span class="post-toggle">↓</span>
+      </div>
+      <div class="post-body">
+        <p>Google just signed a deal with Marvell Technology to co-develop custom AI chips. The stock jumped on the news. Here is what the deal actually involves, why Google wants it, what it means for Broadcom, and what it means for Marvell as an investment.</p>
+
+        <p><strong style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.05em;">GOOGLE'S DNA — REFUSING TO PAY THE PREMIUM</strong></p>
+        <p>This deal did not come out of nowhere. In the late 1990s, while Yahoo and AltaVista were buying expensive enterprise servers from Sun Microsystems at $20,000 apiece, Google strung together hundreds of cheap off-the-shelf PC parts and built software smart enough to assume hardware would fail. Computing capacity per dollar was dramatically higher than any rival. That philosophy — the refusal to pay someone else's margin for hardware — became Google's defining engineering instinct, and it has never left them. Today's "expensive server" is an Nvidia GPU. The H100, the B200 — brilliant chips, but with premium pricing that compounds into the tens of billions of dollars annually at Google's scale. So Google does the same thing they always do. They build their own.</p>
+
+        <p><strong style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.05em;">WHAT IS ACTUALLY BEING BUILT</strong></p>
+        <p>According to the report from The Information, Google and Marvell are co-developing two chips. The first is a Memory Processing Unit (MPU) — a chip designed to manage data movement between memory and Google's TPUs so the processor never waits for data. Modern AI models are not primarily limited by how fast a chip can compute; they are limited by how fast a chip can access data stored in memory. The model weights, the KV cache, the activations — all of it needs to be fetched constantly. The MPU is the solution: the sous-chef that preps everything before the chef asks for it, so the TPU can focus entirely on computation. Lower latency, higher throughput, meaningfully less power draw. Marvell's core expertise is in high-speed interconnects — the pathways that govern how data moves between processors and memory — which makes them the natural fit for this problem. The MPU design is expected to be finalised by 2027. The second chip is an inference-focused TPU, built specifically for running AI models in production rather than training them. When you ask Gemini a question, an inference chip generates your answer. At Google's scale, cost per query is a significant business lever.</p>
+
+        <p><strong style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.05em;">DOES THIS THREATEN BROADCOM? NO.</strong></p>
+        <p>Broadcom signed a deal with Google extending through 2031 just weeks ago. They co-develop Google's flagship training TPUs (TPU v8t "Sunfish"), supply the high-speed networking components and interconnects that link thousands of TPUs into AI Hypercomputer racks, and are part of a three-way deal supplying 3.5 gigawatts of TPU capacity to Anthropic starting 2027. Broadcom's greatest structural defence is its interconnect technology — you cannot swap out their SerDes and switching fabric without rebuilding the entire data centre architecture from scratch. Marvell is being brought in to solve a specific, bounded problem. Broadcom owns the spine. This is a three-partner ASIC strategy: Broadcom for flagship training hardware, MediaTek for cost-optimised inference at volume, and Marvell for memory optimisation and specialised inference. Google now has pricing leverage across all three and supply chain redundancy.</p>
+
+        <p><strong style="color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.05em;">WHAT THIS MEANS FOR MARVELL</strong></p>
+        <div class="key-points">
+          <div class="key-point">Credibility step-change: Marvell holds roughly 8% of the custom ASIC market vs Broadcom's ~60%. The Google deal does not close that gap overnight, but landing a co-development contract at this level is a powerful validation that Marvell can operate at the highest tier of the custom silicon market.</div>
+          <div class="key-point">Revenue quality shift: custom AI chips are high-margin products with long, predictable revenue cycles — structurally different from the lumpy networking and storage business that has historically defined Marvell's risk profile. This deal anchors more revenue to structural AI growth rather than the semiconductor cycle.</div>
+          <div class="key-point">Double validation in a week: NVIDIA's $2B strategic investment to power NVLink Fusion was announced days before the Google deal. NVLink Fusion connects custom ASICs — including potentially Marvell-designed chips — directly to NVIDIA GPUs within the same rack. Two major hyperscaler-level commitments, within days of each other.</div>
+          <div class="key-point">The bottom line: Marvell is not replacing Broadcom, and they are not threatening Nvidia's dominance in training. What they are doing is solving the memory bottleneck — a specific, high-value problem that grows more critical as AI models scale. With the Google co-development deal, a strategic investment from Nvidia, and active programmes with AWS, Microsoft, and Meta, Marvell is a company with a product roadmap tightly aligned with where AI infrastructure is headed over the next three to five years.</div>
+        </div>
+      </div>
+    </div>
+
     <div class="post expanded" id="mrvl-post-001">
       <div class="post-header" onclick="togglePost(this)">
         <span class="post-type type-thesis-update">Thesis Update</span>
